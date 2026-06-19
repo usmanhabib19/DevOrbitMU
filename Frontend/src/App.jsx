@@ -7,12 +7,12 @@ import ScreenLoader from "./components/ScreenLoader";
 
 const App = () => {
 
-    const { isAppLoading } = useAuth()
+    const { loading } = useAuth()
 
     return (
         <ConfigProvider theme={{ token: { colorPrimary: "#1d3557" }, components: { Button: { controlOutline: 0, primaryShadow: "none" } } }}>
 
-            {isAppLoading
+            {loading
                 ? <ScreenLoader />
                 : <Routes />
             }
